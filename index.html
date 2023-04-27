@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+<title>Linode</title>
+</head>
+<body>
+    <div>
+        <div class="flex justify-between items-center h-[45px] border-b px-5">
+            <div class="flex items-center">
+                <div class="w-[16px] h-[16px] rounded-full bg-[#16d070] mr-3"></div>
+                <div class="text-[#636365] text-[16px] font-semibold">RUNNING</div>
+            </div>
+            <div>
+                <ul class="flex items-center">
+                    <li class="mx-3 text-[15px] font-semibold text-[#7aa4d0]">
+                        <a href="">Power Off</a>
+                    </li>
+                    <li class="mx-3 font-semibold text-[#7aa4d0]">
+                        <a href="">Reboot</a>
+                    </li>
+                    <li class="mx-3 font-semibold text-[#7aa4d0]">
+                        <a href="">Launch LISH Console</a>
+                    </li>
+                    <li class="ml-3 font-semibold text-[#7aa4d0]">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex  border-b">
+            <div class="w-full px-5 py-4">
+                <h1 class="text-[#3e3f41] text-[17px] font-semibold">Summary</h1>
+                <div class="">
+                    <div class="flex justify-between text-[#8f8f8f] font-medium w-full mt-4">
+                        <p>1 CPU Core</p>
+                        <p>25 GB Storage</p>
+                    </div>
+                    <div class="flex justify-between text-[#8f8f8f] font-medium w-full mt-4">
+                        <p>1 GB RAM</p>
+                        <p>0 Volumes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-5 py-4">
+                <h1 class="text-[#3e3f41] text-[17px] font-semibold">IP Addresses</h1>
+                <div class="">
+                    <div class="flex justify-between items-center text-[#8f8f8f] font-medium w-full mt-4 bg-[#fafafa]  rounded-sm">
+                        <input type="text" class="pl-2 w-full outline-none border-none bg-[#fafafa]" placeholder="139.144.6.146" readonly>
+                        <div class="w-[30px] h-[30px] bg-[#e2f1fe] flex items-center justify-center grow-0 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-clipboard fill-[#6ca7e1]" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-[#8f8f8f] font-medium w-full mt-4 bg-[#fafafa]  rounded-sm">
+                        <input type="text" class="pl-2 w-full outline-none border-none bg-[#fafafa]" placeholder="2400:8904::f03c:93ff:fe40:94c3" readonly>
+                        <div class="w-[30px] h-[30px] bg-[#e2f1fe] flex items-center justify-center grow-0 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-clipboard fill-[#6ca7e1]" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-5 py-4">
+                <h1 class="text-[#3e3f41] text-[17px] font-semibold">Access</h1>
+                <div class="">
+                    <div class="flex justify-between items-center text-[#8f8f8f] font-medium w-full mt-4 bg-[#fafafa]  rounded-sm">
+                        <p class="bg-[#f4f5f7] w-[190px] grow-0 shrink-0 px-2">SSH Access</p>
+                        <input type="text" class="pl-2 w-full outline-none border-none bg-[#fafafa]" placeholder="ssh root@139.144.6.146" readonly>
+                        <div class="w-[30px] h-[30px] bg-[#e2f1fe] flex items-center justify-center grow-0 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-clipboard fill-[#6ca7e1]" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-[#8f8f8f] font-medium w-full mt-4 bg-[#fafafa]  rounded-sm">
+                        <p class="bg-[#f4f5f7] w-[190px] grow-0 shrink-0 px-2">LISH Console via SSH</p>
+                        <input type="text" class="pl-2 w-full outline-none border-none bg-[#fafafa]" placeholder="ssh -t Harshaweb@lish-mumbai1.linode." readonly>
+                        <div class="w-[30px] h-[30px] bg-[#e2f1fe] flex items-center justify-center grow-0 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-clipboard fill-[#6ca7e1]" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-between h-[50px] px-5">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <p class="text-[15px] font-bold text-[#65666a]">Plan:&nbsp;</p>
+                    <p class="text-[16px] font-semibold text-[#858688]">Nanode 1 GB</p>
+                </div>
+                <div class="h-[20px] w-[1px] bg-[#65666a] mx-3"></div>
+                <div class="flex items-center">
+                    <p class="text-[15px] font-bold text-[#65666a]">Region:&nbsp;</p>
+                    <p class="text-[16px] font-semibold text-[#858688]">Mumbai, IN</p>
+                </div>
+                <div class="h-[20px] w-[1px] bg-[#65666a] mx-3"></div>
+                <div class="flex items-center">
+                    <p class="text-[15px] font-bold text-[#65666a]">Linode ID:&nbsp;</p>
+                    <p class="text-[16px] font-semibold text-[#858688]">39448659</p>
+                </div>
+                <div class="h-[20px] w-[1px] bg-[#65666a] mx-3"></div>
+                <div class="flex items-center">
+                    <p class="text-[15px] font-bold text-[#65666a]">Created:&nbsp;</p>
+                    <p class="text-[16px] font-semibold text-[#858688]">2022-10-11 07:18</p>
+                </div>
+            </div>
+            <button class="flex items-center bg-[#f0f5ff] pl-3 pr-2 py-1 rounded-sm">
+                <p class="text-[#548bc6] font-medium">Add a tag</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus fill-[#6ca7e1] ml-2" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="w-full border-b mt-2">
+        <div class="flex p-4">
+            <div class="p-3 border-b-[3px] border-[#3781da] text-[#434448] font-medium text-[13px] analytics_li cursor-pointer">Analytics</div>
+            <div class="p-3 text-[#70a1cb] font-medium text-[13px] network_li cursor-pointer">Network</div>
+            <div class="p-3 text-[#70a1cb] font-medium text-[13px] storage_li cursor-pointer">Storage</div>
+            <div class="p-3 text-[#70a1cb] font-medium text-[13px] configuration_li cursor-pointer">Configurations</div>
+            <div class="p-3 text-[#70a1cb] font-medium text-[13px] backup_li cursor-pointer">Backups</div>
+            <div class="p-3 text-[#70a1cb] font-medium text-[13px] activity_li cursor-pointer">Activity</div>
+            <div class="p-3 text-[#70a1cb] font-medium text-[13px] settings_li cursor-pointer">Settings</div>
+        </div>
+    </div>
+    <div class="analytics">
+        <div class="p-3">
+            <div class="flex justify-end">
+                analytics
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                   
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="network hidden">
+        <div class="p-3">
+            <div class="flex justify-end">
+                network
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                    
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="storage hidden">
+        <div class="p-3">
+            <div class="flex justify-end">
+                storage
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                   
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="configuration hidden">
+        <div class="p-3">
+            <div class="flex justify-end">
+                configuration
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                   
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="backup hidden">
+        <div class="p-3">
+            <div class="flex justify-end">
+                backup
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                  
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="activity hidden">
+        <div class="p-3">
+            <div class="flex justify-end">
+                activity
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                  
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="settings hidden">
+        <div class="p-3">
+            <div class="flex justify-end">
+                settings
+                <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                    <option value="">Last 24 Hours</option>
+                  
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- <img src="images/WhatsApp Image 2022-11-08 at 14.52.44.jpeg" alt="" class="w-full"> -->
+
+    <script>
+        var analytics_li = document.getElementsByClassName("analytics_li")[0];
+        var network_li = document.getElementsByClassName("network_li")[0];
+        var storage_li = document.getElementsByClassName("storage_li")[0];
+        var configuration_li = document.getElementsByClassName("configuration_li")[0];
+        var backup_li = document.getElementsByClassName("backup_li")[0];
+        var activity_li = document.getElementsByClassName("activity_li")[0];
+        var settings_li = document.getElementsByClassName("settings_li")[0];
+
+        var analytics = document.getElementsByClassName("analytics")[0];
+        var network = document.getElementsByClassName("network")[0];
+        var storage = document.getElementsByClassName("storage")[0];
+        var configuration = document.getElementsByClassName("configuration")[0];
+        var backup = document.getElementsByClassName("backup")[0];
+        var activity = document.getElementsByClassName("activity")[0];
+        var settings = document.getElementsByClassName("settings")[0];
+
+        analytics_li.onclick = function(){
+            analytics.style.display = "block";
+            analytics_li.style.borderBottom = "3px solid #3781da";
+            analytics_li.style.color = "#434448";
+
+            network.style.display = "none";
+            network_li.style.borderBottom = "none";
+            network_li.style.color = "#70a1cb";
+
+            storage.style.display = "none";
+            storage_li.style.borderBottom = "none";
+            storage_li.style.color = "#70a1cb";
+
+            configuration.style.display = "none";
+            configuration_li.style.borderBottom = "none";
+            configuration_li.style.color = "#70a1cb";
+
+            backup.style.display = "none";
+            backup_li.style.borderBottom = "none";
+            backup_li.style.color = "#70a1cb";
+
+            activity.style.display = "none";
+            activity_li.style.borderBottom = "none";
+            activity_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings_li.style.color = "#70a1cb";
+        }
+
+        network_li.onclick = function(){
+            analytics.style.display = "none";
+            analytics_li.style.borderBottom = "none";
+            analytics_li.style.color = "#70a1cb";
+
+            network.style.display = "block";
+            network_li.style.borderBottom = "3px solid #3781da";
+            network_li.style.color = "#434448";
+
+            storage.style.display = "none";
+            storage_li.style.borderBottom = "none";
+            storage_li.style.color = "#70a1cb";
+
+            configuration.style.display = "none";
+            configuration_li.style.borderBottom = "none";
+            configuration_li.style.color = "#70a1cb";
+
+            backup.style.display = "none";
+            backup_li.style.borderBottom = "none";
+            backup_li.style.color = "#70a1cb";
+
+            activity.style.display = "none";
+            activity_li.style.borderBottom = "none";
+            activity_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings_li.style.color = "#70a1cb";
+        }
+
+        storage_li.onclick = function(){
+            analytics.style.display = "none";
+            analytics_li.style.borderBottom = "none";
+            analytics_li.style.color = "#70a1cb";
+
+            network.style.display = "none";
+            network_li.style.borderBottom = "none";
+            network_li.style.color = "#70a1cb";
+
+            storage.style.display = "block";
+            storage_li.style.borderBottom = "3px solid #3781da";
+            storage_li.style.color = "#434448";
+
+            configuration.style.display = "none";
+            configuration_li.style.borderBottom = "none";
+            configuration_li.style.color = "#70a1cb";
+
+            backup.style.display = "none";
+            backup_li.style.borderBottom = "none";
+            backup_li.style.color = "#70a1cb";
+
+            activity.style.display = "none";
+            activity_li.style.borderBottom = "none";
+            activity_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings_li.style.color = "#70a1cb";
+        }
+
+        configuration_li.onclick = function(){
+            analytics.style.display = "none";
+            analytics_li.style.borderBottom = "none";
+            analytics_li.style.color = "#70a1cb";
+
+            network.style.display = "none";
+            network_li.style.borderBottom = "none";
+            network_li.style.color = "#70a1cb";
+
+            storage.style.display = "none";
+            storage_li.style.borderBottom = "none";
+            storage_li.style.color = "#70a1cb";
+
+            configuration.style.display = "block";
+            configuration_li.style.borderBottom = "3px solid #3781da";
+            configuration_li.style.color = "#434448";
+
+            backup.style.display = "none";
+            backup_li.style.borderBottom = "none";
+            backup_li.style.color = "#70a1cb";
+
+            activity.style.display = "none";
+            activity_li.style.borderBottom = "none";
+            activity_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings_li.style.color = "#70a1cb";
+        }
+
+        backup_li.onclick = function(){
+            analytics.style.display = "none";
+            analytics_li.style.borderBottom = "none";
+            analytics_li.style.color = "#70a1cb";
+
+            network.style.display = "none";
+            network_li.style.borderBottom = "none";
+            network_li.style.color = "#70a1cb";
+
+            storage.style.display = "none";
+            storage_li.style.borderBottom = "none";
+            storage_li.style.color = "#70a1cb";
+
+            configuration.style.display = "none";
+            configuration_li.style.borderBottom = "none";
+            configuration_li.style.color = "#70a1cb";
+
+            backup.style.display = "block";
+            backup_li.style.borderBottom = "3px solid #3781da";
+            backup_li.style.color = "#434448";
+
+            activity.style.display = "none";
+            activity_li.style.borderBottom = "none";
+            activity_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings_li.style.color = "#70a1cb";
+        }
+        activity_li.onclick = function(){
+            analytics.style.display = "none";
+            analytics_li.style.borderBottom = "none";
+            analytics_li.style.color = "#70a1cb";
+
+            network.style.display = "none";
+            network_li.style.borderBottom = "none";
+            network_li.style.color = "#70a1cb";
+
+            storage.style.display = "none";
+            storage_li.style.borderBottom = "none";
+            storage_li.style.color = "#70a1cb";
+
+            configuration.style.display = "none";
+            configuration_li.style.borderBottom = "none";
+            configuration_li.style.color = "#70a1cb";
+
+            backup.style.display = "none";
+            backup_li.style.borderBottom = "none";
+            backup_li.style.color = "#70a1cb";
+
+            activity.style.display = "block";
+            activity_li.style.borderBottom = "3px solid #3781da";
+            activity_li.style.color = "#434448";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings_li.style.color = "#70a1cb";
+        }
+        settings_li.onclick = function(){
+            analytics.style.display = "none";
+            analytics_li.style.borderBottom = "none";
+            analytics_li.style.color = "#70a1cb";
+
+            network.style.display = "none";
+            network_li.style.borderBottom = "none";
+            network_li.style.color = "#70a1cb";
+
+            storage.style.display = "none";
+            storage_li.style.borderBottom = "none";
+            storage_li.style.color = "#70a1cb";
+
+            configuration.style.display = "none";
+            configuration_li.style.borderBottom = "none";
+            configuration_li.style.color = "#70a1cb";
+
+            backup.style.display = "none";
+            backup_li.style.borderBottom = "none";
+            backup_li.style.color = "#70a1cb";
+
+            activity.style.display = "none";
+            activity_li.style.borderBottom = "none";
+            activity_li.style.color = "#70a1cb";
+
+            settings.style.display = "block";
+            settings_li.style.borderBottom = "3px solid #3781da";
+            settings_li.style.color = "#434448";
+        }
+    </script>
+</body>
+</html>

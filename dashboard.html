@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+<title>Linode</title>
+</head>
+<body>
+    <div class="w-full p-6 bg-[#f4f5f7]">
+        <div class="w-full flex justify-between">
+            <div class="text-[#67686c] font-medium">Account</div>
+            <div class="flex items-center">
+                <div class="flex items-center text-[#70a1cb] mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text fill-[#3781da] mr-1" viewBox="0 0 16 16">
+                        <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                    </svg>
+                    <p class="text-[12px] font-medium">How Linode Billing Works</p>
+                </div>
+
+                <button class="bg-[#3781da] h-[30px] text-white leading-[30px] px-3 text-[14px]">Make a Payment</button>
+            </div>
+        </div>
+        <div class="w-full border-b mt-2">
+            <div class="flex">
+                <div class="p-3 border-b-[3px] border-[#3781da] text-[#434448] font-medium text-[13px] billing_info_li cursor-pointer">Billing Info</div>
+                <div class="p-3 text-[#70a1cb] font-medium text-[13px] user_grant_li cursor-pointer">Users & Grants</div>
+                <div class="p-3 text-[#70a1cb] font-medium text-[13px] service_transfer_li cursor-pointer">Service Transfers</div>
+                <div class="p-3 text-[#70a1cb] font-medium text-[13px] maintenance_li cursor-pointer">Maintenance</div>
+                <div class="p-3 text-[#70a1cb] font-medium text-[13px] settings_li cursor-pointer">Settings</div>
+            </div>
+        </div>
+        <div class="billing_info hidden">
+            <div class="flex w-full">
+                <div class="w-1/3 bg-white rounded-sm px-3 py-2 m-3">
+                    <div class="border-b text-[#535458] text-[14px] font-semibold pb-2">Account Balance</div>
+                    <div class="flex items-center mt-2 justify-between">
+                        <p class="text-[#acacae] text-[12px] font-medium">You have no balance at this time</p>
+                        <p class="text-[#727375] text-[13px] font-medium">$0.0</p>
+                    </div>
+                </div>
+                <div class="w-1/3 bg-white rounded-sm px-3 py-2 m-3">
+                    <div class="border-b text-[#535458] text-[14px] font-semibold pb-2">Promotions</div>
+                    <div class="flex mt-2 justify-between">
+                        <div>
+                            <div class="text-[#7e7f81] text-[12px] font-semibold flex items-center">
+                                <p class="font-semibold">netchuck100922b</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-question-circle ml-2" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                </svg>
+                            </div>
+                            <p class="text-[#acacae] text-[12px] font-medium">Expires: 2023-01-01</p>
+                        </div>
+                        <p class="text-[#76c998] text-[13px] font-medium">$78.08 remaining</p>
+                    </div>
+                </div>
+                <div class="w-1/3 bg-white rounded-sm px-3 py-2 m-3">
+                    <div class="text-[#535458] text-[14px] font-semibold flex items-center border-b pb-2">
+                        <p class="font-semibold">Account Balance</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-question-circle ml-2" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                        </svg>
+                    </div>
+                    <div class="flex items-center mt-2 justify-between">
+                        <p class="text-[#acacae] text-[12px] font-medium">Since last invoice</p>
+                        <p class="text-[#727375] text-[13px] font-medium">$10.24</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full">
+                <div class="w-1/2 bg-white p-3 m-3">
+                    <div class="flex justify-between">
+                        <div class="text-[#535458] text-[14px] font-bold pb-2">Billing Contact</div>
+                        <p class="text-[12px] text-[#70a1cb] font-medium">Edit</p>
+                    </div>
+                    <div class="flex">
+                        <div class="w-1/2">
+                            <p class="text-[#acacae] text-[12px] font-medium">Harsh Singh</p>
+                            <p class="text-[#acacae] text-[12px] font-medium">Harsha Web</p>
+                            <p class="text-[#acacae] text-[12px] font-medium">Netaji Subhash Place, Delhi</p>
+                            <p class="text-[#acacae] text-[12px] font-medium">Building Name => pearl best heights 2, office =>809</p>
+                            <p class="text-[#acacae] text-[12px] font-medium">Delhi, Delhi-110006</p>
+                            <p class="text-[#acacae] text-[12px] font-medium">India</p>
+                        </div>
+                        <div class="w-1/2">
+                            <p class="text-[#acacae] text-[12px] font-medium">info@harshaweb.com</p>
+                            <p class="text-[#acacae] text-[12px] font-medium">+919369390970</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 bg-white p-3 m-3">
+                    <div class="flex justify-between">
+                        <div class="text-[#535458] text-[14px] font-bold pb-2">Payment Methods</div>
+                        <p class="text-[12px] text-[#70a1cb] font-medium">Add Payment Method</p>
+                    </div>
+                    <div class="border p-2 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="images/Mastercard_2019_logo.svg.png" alt="" class="h-[13px]">
+                            <div class="text-[#535458] text-[13px] font-semibold pl-1">Mastercard****6571</div>
+                            <p class="text-[#acacae] text-[12px] font-medium ml-1">Expires 09/26</p>
+                            <p class="px-[2px] py-[1px] bg-[#e9e9e9] text-[10px] font-medium text-[#acacae] rounded-sm mx-2">Default</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots fill-[#70a1cb]" viewBox="0 0 16 16">
+                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                        </svg>
+                    </div>
+                    <div class="flex items-center justify-between my-4">
+                        <div class="flex items-center">
+                            <img src="images/8de097c07e08973cca9f0b2eeb62fcc2.jpg" alt="" class="h-[24px]">
+                            <p class="text-[#acacae] text-[12px] font-medium">Paypal is now avilable for recurring payments.</p>
+                            <p class="text-[#acacae] text-[12px] font-medium ml-1">Add PayPal</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 mt-4 bg-white">
+                <div class="flex justify-between">
+                    <div class="text-[#535458] text-[14px] font-bold">Billing & Payment History</div>
+                    <div class="flex items-center">
+                        <p class="text-[#acacae] text-[12px] font-medium">Account active since 2022-10-08</p>
+                        <select name="" id="" class="border px-3 py-1 mx-1 text-[#acacae] text-[12px] font-medium">
+                            <option value="">All Transaction Types</option>
+                        </select>
+                        <select name="" id="" class="border px-3 py-1 text-[#acacae] text-[12px] font-medium">
+                            <option value="">6 Months</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="w-full">
+                    <thead class="w-full">
+                        <tr>
+                            <th class="text-[#b2b6b7] p-2 border text-[12px] font-medium text-left">Description</th>
+                            <th class="text-[#b2b6b7] p-2 border text-[12px] font-medium text-left">Date</th>
+                            <th class="text-[#b2b6b7] p-2 border text-[12px] font-medium text-left">Amount</th>
+                            <th class="text-[#b2b6b7] p-2 border text-[12px] font-medium text-left"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border p-2">
+                                <p class="text-[12px] text-[#70a1cb] font-medium">Invoice #22434091</p>
+                            </td>
+                            <td class="border p-2">
+                                <p class="text-[#727375] text-[13px] font-medium">2022-11-01 04:16</p>
+                            </td>
+                            <td class="border p-2">
+                                <p class="text-[#727375] text-[13px] font-medium">$0.0</p>
+                            </td>
+                            <td class="border p-2">
+                                <p class="text-[12px] text-[#70a1cb] font-medium">Download PDF</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="user_grant hidden">
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Backup Auto Enrollment</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">This controls whether Linode Backups are enabled, by default, for all Linodes when they are initially created. For each Linode with Backups enabled, your account will be billed the additional hourly rate noted on the <a class="text-[#70a1cb]">Backups pricing page <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                  </svg>
+                </a>
+                </p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[36px] p-[3px] bg-[#c9cacc] mr-2">
+                        <div class="bg-white h-[14px] w-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Disabled (Don't enroll new Linodes in Backups automatically)
+                    </p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Network Helper</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Network Helper automatically deposits a static networking configuration into your Linode at boot.</p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[34px] p-[3px] bg-[#3683d9] mr-2">
+                        <div class="bg-white h-[14px] w-[14px] relative left-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Enabled (Default Browser)</p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Object Storage</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Content Storage and delivery for unstructured data. Great for multimedia, static sites, software delivery, archives, and data backups. To get started with Object Storage create a <a class="text-[#70a1cb]">Bucket
+                    </a>
+                    <p class="text-[#98999b] text-[12px] font-semibold">or an</p>
+                    <a class="text-[#70a1cb] text-[12px] font-semibold">Access Key. Learn more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Linode Managed</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Linode Managed includes Backups, Longview Pro, cPanel, and round-the-clock monitoring to help keep your systems up and running, +$100/month per Linode <a class="text-[#70a1cb]">Learn More</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                </p>
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Add Linode Managed</div>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-3">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Close Account</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Close Account</div>
+            </div>
+        </div>
+        <div class="service_transfer hidden">
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Backup Auto Enrollment</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">This controls whether Linode Backups are enabled, by default, for all Linodes when they are initially created. For each Linode with Backups enabled, your account will be billed the additional hourly rate noted on the <a class="text-[#70a1cb]">Backups pricing page <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                  </svg>
+                </a>
+                </p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[36px] p-[3px] bg-[#c9cacc] mr-2">
+                        <div class="bg-white h-[14px] w-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Disabled (Don't enroll new Linodes in Backups automatically)
+                    </p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Network Helper</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Network Helper automatically deposits a static networking configuration into your Linode at boot.</p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[34px] p-[3px] bg-[#3683d9] mr-2">
+                        <div class="bg-white h-[14px] w-[14px] relative left-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Enabled (Default Browser)</p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Object Storage</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Content Storage and delivery for unstructured data. Great for multimedia, static sites, software delivery, archives, and data backups. To get started with Object Storage create a <a class="text-[#70a1cb]">Bucket
+                    </a>
+                    <p class="text-[#98999b] text-[12px] font-semibold">or an</p>
+                    <a class="text-[#70a1cb] text-[12px] font-semibold">Access Key. Learn more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Linode Managed</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Linode Managed includes Backups, Longview Pro, cPanel, and round-the-clock monitoring to help keep your systems up and running, +$100/month per Linode <a class="text-[#70a1cb]">Learn More</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                </p>
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Add Linode Managed</div>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-3">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Close Account</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Close Account</div>
+            </div>
+        </div>
+        <div class="maintenance hidden">
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Backup Auto Enrollment</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">This controls whether Linode Backups are enabled, by default, for all Linodes when they are initially created. For each Linode with Backups enabled, your account will be billed the additional hourly rate noted on the <a class="text-[#70a1cb]">Backups pricing page <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                  </svg>
+                </a>
+                </p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[36px] p-[3px] bg-[#c9cacc] mr-2">
+                        <div class="bg-white h-[14px] w-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Disabled (Don't enroll new Linodes in Backups automatically)
+                    </p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Network Helper</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Network Helper automatically deposits a static networking configuration into your Linode at boot.</p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[34px] p-[3px] bg-[#3683d9] mr-2">
+                        <div class="bg-white h-[14px] w-[14px] relative left-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Enabled (Default Browser)</p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Object Storage</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Content Storage and delivery for unstructured data. Great for multimedia, static sites, software delivery, archives, and data backups. To get started with Object Storage create a <a class="text-[#70a1cb]">Bucket
+                    </a>
+                    <p class="text-[#98999b] text-[12px] font-semibold">or an</p>
+                    <a class="text-[#70a1cb] text-[12px] font-semibold">Access Key. Learn more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Linode Managed</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Linode Managed includes Backups, Longview Pro, cPanel, and round-the-clock monitoring to help keep your systems up and running, +$100/month per Linode <a class="text-[#70a1cb]">Learn More</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                </p>
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Add Linode Managed</div>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-3">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Close Account</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Close Account</div>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Backup Auto Enrollment</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">This controls whether Linode Backups are enabled, by default, for all Linodes when they are initially created. For each Linode with Backups enabled, your account will be billed the additional hourly rate noted on the <a class="text-[#70a1cb]">Backups pricing page <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                  </svg>
+                </a>
+                </p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[36px] p-[3px] bg-[#c9cacc] mr-2">
+                        <div class="bg-white h-[14px] w-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Disabled (Don't enroll new Linodes in Backups automatically)
+                    </p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Network Helper</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Network Helper automatically deposits a static networking configuration into your Linode at boot.</p>
+                <div class="flex my-2">
+                    <div class="h-[20px] w-[34px] p-[3px] bg-[#3683d9] mr-2">
+                        <div class="bg-white h-[14px] w-[14px] relative left-[14px]"></div>
+                    </div>
+                    <p class="text-[#98999b] text-[12px] font-semibold">Enabled (Default Browser)</p>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold">For existing Linodes without backups, <a class="text-[#70a1cb]">enable now.</a>
+                </p>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Object Storage</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Content Storage and delivery for unstructured data. Great for multimedia, static sites, software delivery, archives, and data backups. To get started with Object Storage create a <a class="text-[#70a1cb]">Bucket
+                    </a>
+                    <p class="text-[#98999b] text-[12px] font-semibold">or an</p>
+                    <a class="text-[#70a1cb] text-[12px] font-semibold">Access Key. Learn more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Linode Managed</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <p class="text-[#98999b] text-[12px] font-semibold my-2">Linode Managed includes Backups, Longview Pro, cPanel, and round-the-clock monitoring to help keep your systems up and running, +$100/month per Linode <a class="text-[#70a1cb]">Learn More</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-down-left rotate-180 inline" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+                    </svg>
+                </p>
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Add Linode Managed</div>
+            </div>
+            <div class="bg-white p-3 my-3">
+                <div class="flex justify-between items-center mb-3">
+                    <p class="text-[#3f4044] text-[12px] font-bold">Close Account</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down fill-[#4979b0]" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                
+                <div class="px-2 py-1 text-[#4f7fb5] text-[14px] font-semibold border-[#4f7fb5] border inline rounded-sm">Close Account</div>
+            </div>
+        </div>
+    </div>
+    <img src="images/WhatsApp Image 2022-11-08 at 12.35.39.jpeg" alt="" class="w-full">
+    <script>
+        var billing_info_li = document.getElementsByClassName("billing_info_li")[0];
+        var user_grant_li = document.getElementsByClassName("user_grant_li")[0];
+        var service_transfer_li = document.getElementsByClassName("service_transfer_li")[0];
+        var maintenance_li = document.getElementsByClassName("maintenance_li")[0];
+        var settings_li = document.getElementsByClassName("settings_li")[0];
+        var billing_info = document.getElementsByClassName("billing_info")[0];
+        var user_grant = document.getElementsByClassName("user_grant")[0];
+        var service_transfer = document.getElementsByClassName("service_transfer")[0];
+        var maintenance = document.getElementsByClassName("maintenance")[0];
+        var settings = document.getElementsByClassName("settings")[0];
+
+        billing_info_li.onclick = function(){
+            billing_info.style.display = "block";
+            billing_info_li.style.borderBottom = "3px solid #3781da";
+            billing_info_li.style.color = "#434448";
+
+            user_grant.style.display = "none";
+            user_grant_li.style.borderBottom = "none";
+            user_grant_li.style.color = "#70a1cb";
+
+            service_transfer.style.display = "none";
+            service_transfer_li.style.borderBottom = "none";
+            service_transfer_li.style.color = "#70a1cb";
+
+            maintenance.style.display = "none";
+            maintenance_li.style.borderBottom = "none";
+            maintenance_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings.style_li.borderBottom = "none";
+            settings.style_li.color = "#70a1cb";
+        }
+        user_grant_li.onclick = function(){
+            billing_info.style.display = "none";
+            billing_info_li.style.borderBottom = "none";
+            billing_info_li.style.color = "#70a1cb";
+
+            user_grant.style.display = "block";
+            user_grant_li.style.borderBottom = "3px solid #3781da";
+            user_grant_li.style.color = "#434448";
+
+            service_transfer.style.display = "none";
+            service_transfer_li.style.borderBottom = "none";
+            service_transfer_li.style.color = "#70a1cb";
+
+            maintenance.style.display = "none";
+            maintenance_li.style.borderBottom = "none";
+            maintenance_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings.style_li.color = "#70a1cb";
+        }
+        service_transfer_li.onclick = function(){
+            billing_info.style.display = "none";
+            billing_info_li.style.borderBottom = "none";
+            billing_info_li.style.color = "#70a1cb";
+
+            user_grant.style.display = "none";
+            user_grant_li.style.borderBottom = "none";
+            user_grant_li.style.color = "#70a1cb";
+
+            service_transfer.style.display = "block";
+            service_transfer_li.style.borderBottom = "3px solid #3781da";
+            service_transfer_li.style.color = "#434448";
+
+            maintenance.style.display = "none";
+            maintenance_li.style.borderBottom = "none";
+            maintenance_li.style.color = "#70a1cb";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings.style_li.color = "#70a1cb";
+        }
+        maintenance_li.onclick = function(){
+            billing_info.style.display = "none";
+            billing_info_li.style.borderBottom = "none";
+            billing_info_li.style.color = "#70a1cb";
+
+            user_grant.style.display = "none";
+            user_grant_li.style.borderBottom = "none";
+            user_grant_li.style.color = "#70a1cb";
+
+            service_transfer.style.display = "none";
+            service_transfer_li.style.borderBottom = "none";
+            service_transfer_li.style.color = "#70a1cb";
+
+            maintenance.style.display = "block";
+            maintenance_li.style.borderBottom = "3px solid #3781da";
+            maintenance_li.style.color = "#434448";
+
+            settings.style.display = "none";
+            settings_li.style.borderBottom = "none";
+            settings.style_li.color = "#70a1cb";
+        }
+        settings_li.onclick = function(){
+            billing_info.style.display = "none";
+            billing_info_li.style.borderBottom = "none";
+            billing_info_li.style.color = "#70a1cb";
+
+            user_grant.style.display = "none";
+            user_grant_li.style.borderBottom = "none";
+            user_grant_li.style.color = "#70a1cb";
+
+            service_transfer.style.display = "none";
+            service_transfer_li.style.borderBottom = "none";
+            service_transfer_li.style.color = "#70a1cb";
+
+            maintenance.style.display = "none";
+            maintenance_li.style.borderBottom = "none";
+            maintenance_li.style.color = "#70a1cb";
+
+            settings.style.display = "block";
+            settings_li.style.borderBottom = "3px solid #3781da";
+            settings_li.style.color = "#434448";
+        }
+    </script>
+</body>
+</html>
